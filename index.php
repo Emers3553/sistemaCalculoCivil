@@ -44,37 +44,87 @@
                                 </div>
                                 <br>
                                 <div class="col-md-12 mx-auto text-center">
-                                    <label for="Areacalc">AREA CALCULAR</label>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <div class="input-group mb-2">
-                                        <input type="number" name="Areacalc" class="form-control text-center" id="Areacalc" placeholder="100" min="0" step="any">
-                                        <div class="input-group-append">
-                                            <span class="input-group-text">m<sup>2</sup></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="col-md-12 mx-auto text-center">
                                     <label for="tipoCalc">TIPO DE AREA</label>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <div class="input-group mb-2">
-                                        <select class="form-control" name="tipoCalc" id="tipoCalc">
+                                        <select class="form-control text-center" name="tipoCalc" id="tipoCalc">
                                             <option value="" selected="disabled">Selecciona el tipo</option>
-                                            <option value="techo">TECHO</option>
-                                            <option value="pared">PARED</option>
-                                            <option value="pintura">PINTURA</option>
+                                            <option value="TECHO">TECHO</option>
+                                            <option value="PARED">PARED</option>
+                                            <option value="PINTURA">PINTURA</option>
                                         </select>
                                     </div>
                                 </div>
                                 <br>
+                                <div class="col-md-12 mx-auto text-center">
+                                    <label for="Areacalc">AREA CALCULAR</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-group mb-2">
+                                        <input type="number" name="Areacalc" class="form-control text-center" id="Areacalc" placeholder="100" min="0" step="any" step="0.01" required>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" id="unidadMedida">m<sup>2</sup></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- div ocultos -->
+                                <!-- TECHO -->
                                 <div class="col-md-12 mx-auto text-center" id="caidasAguaDiv" style="display: none;">
                                     <label for="caidasAgua">CAIDAS DE AGUA</label>&nbsp;&nbsp;&nbsp;&nbsp;
                                     <div class="input-group mb-2">
-                                        <select class="form-control" name="caidasAgua" id="caidasAgua">
+                                        <select class="form-control text-center" name="caidasAgua" id="caidasAgua">
                                             <option value="" selected="disabled">Selecciona la caida</option>
                                             <option value="1">1 CAIDA DE AGUA</option>
                                             <option value="2">2 CAIDA DE AGUA</option>
                                             <option value="3">3 CAIDA DE AGUA</option>
                                             <option value="4">4 CAIDA DE AGUA</option>
                                         </select>
+                                    </div>
+                                </div>
+                                <br>
+                                <!-- PARED -->
+                                <div class="col-md-12 mx-auto text-center" id="longitudToPiso" style="display: none;">
+                                    <label for="longtotalPiso">LONGITUD TOTAL EN PISO</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-group mb-2">
+                                        <input type="number" name="longtotalPiso" class="form-control text-center" id="longtotalPiso" placeholder="2" min="0" step="any" step="0.01">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" >ml</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mx-auto text-center" id="alturaPisoTecho" style="display: none;">
+                                    <label for="altpisotech">ALTURA DE PISO A TECHO</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-group mb-2">
+                                        <input type="number" name="altpisotech" class="form-control text-center" id="altpisotech" placeholder="2" min="0" step="any" step="0.01">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" >ml</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mx-auto text-center" id="SepParantes" style="display: none;">
+                                    <label for="separparantes">SEPARACION ENTRE PARANTES(si h3m ingresar 0.40 m)</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-group mb-2">
+                                        <input type="number" name="separparantes" class="form-control text-center" id="separparantes" placeholder="2" min="0" step="any" step="0.01">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" >m<sup>2</sup>/l</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mx-auto text-center" id="numCaras" style="display: none;">
+                                    <label for="numcar">NUMERO DE CARAS</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-group mb-2">
+                                        <input type="number" name="numcar" class="form-control text-center" id="numcar" placeholder="2" min="0" step="any" step="0.01">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" >m<sup>2</sup>/l</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- PINTURA -->
+                                <div class="col-md-12 mx-auto text-center" id="coberturaPintura" style="display: none;">
+                                    <label for="cobpintura">COBERTURA DE LA PINTURA</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <div class="input-group mb-2">
+                                        <input type="number" name="cobpintura" class="form-control text-center" id="cobpintura" placeholder="2" min="0" step="any" step="0.01">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" >m<sup>2</sup>/l</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <br>
@@ -87,6 +137,7 @@
                         </div>
                     </div>
                     <div class="col-9">
+                        <div id="resultado"></div>
                         <div class="card-body" id="mostrarHojaCalc" style="width: 1000px; height: 830px;"></div>
                     </div>
                 </div>
