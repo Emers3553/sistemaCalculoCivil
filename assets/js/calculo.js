@@ -77,7 +77,7 @@ $(document).ready(function () {
             doc.setFont("Arial Narrow", "normal");
             doc.setFontSize(12);
             doc.setTextColor(0, 0, 0); // Establece el color del texto (RGB)
-            doc.text('Aquí puedes agregar texto del cuerpo del documento.', 20, yPosition);
+            doc.text('El calculo esta basado: .', 20, yPosition);
             // Incrementa la posición Y para el próximo elemento en el cuerpo
             yPosition += 10; // Puedes ajustar este valor según la altura de tus líneas de texto
             // Define tu texto en párrafos
